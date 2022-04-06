@@ -163,11 +163,15 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
         /*
          * Package Service Providers...
          */
-
+        Rebing\GraphQL\GraphQLServiceProvider::class,
+        // MLL\GraphQLPlayground\GraphQLPlaygroundServiceProvider::class,
+        // Nuwave\Lighthouse\LighthouseServiceProvider::class,
+        // Nuwave\Lighthouse\Pagination\PaginationServiceProvider::class,
+        // Nuwave\Lighthouse\Validation\ValidationServiceProvider::class,
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -176,7 +180,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
     ],
 
     /*
@@ -191,6 +194,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth',
+        'JWTFactory' => 'Tymon\JWTAuth\Facades\JWTFactory',
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
