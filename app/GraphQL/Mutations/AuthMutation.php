@@ -57,6 +57,7 @@ class AuthMutation extends Mutation
             return json_encode(['error' => 'could_not_create_token'], 500);
         }
         // all good so return the token
-        return json_encode(compact('token'));
+
+        return compact('token');
     }
 }

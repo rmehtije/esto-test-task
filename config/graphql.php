@@ -87,6 +87,7 @@ return [
             'types' => [
                 'User' => App\GraphQL\Types\UserType::class,
                 'Creditcard' => App\GraphQL\Types\CreditcardType::class,
+                'Token' => App\GraphQL\Types\TokenType::class,
             ],
 
             // Laravel HTTP middleware
